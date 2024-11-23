@@ -18,6 +18,16 @@ namespace MLib
             m.gameObject.SetActive(false);
         }
 
+        public static void SetActive(this MonoBehaviour m, bool active)
+        {
+            m.gameObject.SetActive(active);
+        }
+
+        public static void SetActive(this Component m, bool active)
+        {
+            m.gameObject.SetActive(active);
+        }
+
         public static Coroutine DelayCall(this MonoBehaviour m, float delay, Action callback)
         {
             return m.StartCoroutine(IE_DelayCall());
